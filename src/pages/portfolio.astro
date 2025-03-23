@@ -1,0 +1,21 @@
+---
+// export const prerender = false;
+
+import { SectionWrapper } from "#components/wrappers/section-wrapper";
+import Layout from "#layouts/Layout.astro";
+import { Portfolio as PortfolioComponent } from "#components/sections/portfolio";
+---
+
+<Layout title="Portfolio">
+	<div class="flex w-full h-full my-12">
+		<SectionWrapper
+			client:load
+			id="portfolio-cases"
+			title="Examples of Our Works"
+		>
+			<div class="grid gap-4">
+				<PortfolioComponent client:load />
+			</div>
+		</SectionWrapper>
+	</div>
+</Layout>

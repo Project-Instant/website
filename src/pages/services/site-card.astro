@@ -1,0 +1,87 @@
+---
+import { Button } from "#ui/button";
+import { SectionWrapper } from "#components/wrappers/section-wrapper";
+import { TargetPageWrapper } from "#components/wrappers/target-page-wrapper";
+import Layout from "#layouts/Layout.astro";
+---
+
+<Layout
+  title="Site Card"
+  description="What is a business card website? Instant will explain!"
+>
+  <div class="flex flex-col w-full h-full min-h-screen pt-36 lg:pt-24">
+    <TargetPageWrapper
+      title="Business card website"
+      description="this is an effective way to sell your services or products on multiple pages."
+      anchor="site-card-information"
+      backgroundColor="bg-purple-800"
+    />
+    <div id="site-card-information" class="flex flex-col">
+      <SectionWrapper
+        id="site-card-pluses"
+        title="Advantages of a business card website"
+      >
+        <ul class="flex flex-col gap-2 *:text-md lg:*:text-lg *:text-white">
+          <li>
+            <p>- static content</p>
+          </li>
+          <li>
+            <p>- low cost of creating and maintaining the resource</p>
+          </li>
+          <li>
+            <p>- stable traffic from geo-queries</p>
+          </li>
+          <li>
+            <p>- growth of user trust</p>
+          </li>
+          <li>
+            <p>
+              - transfer of the business card address online (via email,
+              messengers, and social networks).
+            </p>
+          </li>
+        </ul>
+      </SectionWrapper>
+      <SectionWrapper
+        id="site-card-how-to-work"
+        title="Who needs a business card website?"
+      >
+        <div class="flex flex-row gap-4 *:text-md lg:*:text-lg *:text-white">
+          <div class="flex flex-col gap-y-6">
+            <div class="flex flex-col gap-y-2">
+              <p>
+                A business card website is the optimal form of presentation for
+                self-employed specialists, startups, and small companies. It is
+                used for business promotion:
+              </p>
+              <p>
+                - little-known companies in the early stages of entrepreneurship
+                and brand promotion. Over time, when a young business can afford
+                to increase its advertising budget, it transforms the business
+                card website into a full-fledged resource;
+              </p>
+              <p>
+                - small and medium-sized companies, private self-employed
+                individuals indicating geolocation and providing offline
+                services (trade, construction, repair, cleaning, jurisprudence,
+                accounting, pedagogy, beauty sphere, etc.);
+              </p>
+              <p>
+                - companies and individuals providing online services
+                (programming, design, translation, copywriting, etc.), whose
+                business cards can contain links to completed works (portfolio).
+              </p>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+    </div>
+    <div class="wrapper w-fit mb-12">
+      <a href="/#contacts">
+        <Button>
+          <p class="text-lg text-white font-medium">Contact Us</p>
+        </Button>
+      </a>
+    </div>
+  </div>
+</Layout>

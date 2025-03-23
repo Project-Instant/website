@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SectionWrapper } from "#components/wrappers/section-wrapper";
+import { Pricing } from "#components/sections/pricing";
+import { Services } from "#components/sections/services";
+import { Ripple } from "#ui/ripple";
+import { RainbowButton } from "#ui/rainbow-button";
+import { Button } from "#ui/button";
+---
+
+<Layout title="Welcome">
+	<div
+		class="flex flex-col justify-center relative lg:flex-row w-full h-full min-h-screen items-center gap-y-16 gap-x-32"
+	>
+		<Ripple client:load />
+		<div
+			class="flex relative items-center flex-col gap-y-12 w-full lg:w-4/5 lg:pt-0 wrapper"
+		>
+			<div class="flex flex-col items-center gap-y-6 w-full">
+				<span
+					class="font-bold text-center text-4xl xl:text-6xl 2xl:text-7xl text-white"
+				>
+					The best developments are only with us
+				</span>
+				<span
+					class="text-cod-gray-300 text-center text-lg xl:text-xl 2xl:text-2xl font-medium"
+				>
+					We specialize in developing websites of various levels: from simple
+					landing pages to markets.
+				</span>
+			</div>
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+				<a href="#contact">
+					<RainbowButton client:load>
+						<span class="text-cod-gray-800 text-lg font-semibold">
+							🚀&nbsp;&nbsp;Create a order
+						</span>
+					</RainbowButton>
+				</a>
+				<Button client:load class="border px-8 border-cod-gray-400 rounded-xl">
+					<span class="text-cod-gray-50 text-lg font-semibold">
+						About Instant
+					</span>
+				</Button>
+			</div>
+		</div>
+	</div>
+	<SectionWrapper client:load id="available-services" title="Our Services">
+		<Services />
+	</SectionWrapper>
+	<SectionWrapper client:load id="pricing" title="Cost of Services">
+		<Pricing />
+	</SectionWrapper>
+</Layout>

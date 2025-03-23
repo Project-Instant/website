@@ -1,0 +1,66 @@
+---
+import { getLangFromUrl } from "#i18n/utils";
+import { Header } from "#components/header/header";
+import { Footer } from "#components/footer/footer";
+
+import "#styles/globals.css";
+
+const lang = getLangFromUrl(Astro.url);
+const title = `${Astro.props.title ?? "Studio"} | Instant`;
+const description =
+	Astro.props.description ??
+	"Instant is a development studio that develops high-quality, selling websites and more.";
+
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta property="og:title" content={title} />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:site_name" content="Instant Project" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en" />
+		<meta property="og:image" content="/favicon.ico" />
+		<meta name="robots" content="index, follow, noarchive" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:image" content="/favicon.ico" />
+		<meta name="twitter:description" content={description} />
+		<meta
+			name="keywords"
+			content="Instant, лендинг для сайта, landing page for the site, лендинг, landing, сайт-визитка, web site card, site-card, телеграм бот, telegram bot, bot, bots, to order a site, order website development, заказать лендинг, to order a landing, order landing development, создать сайт, create a website, создать сайт-визитку, create a web site card, разработка сайта под ключ, turnkey website development, разработка сайта, website development, разработка телеграм ботов, telegram bot development, bots development, разработка ботов"
+		/>
+		<meta name="author" content="Instant" />
+		<meta name="creator" content="Instant" />
+		<meta name="referrer" content="origin-when-cross-origin" />
+		<meta name="application-name" content="Instant" />
+		<meta name="google-site-verification" content="google" />
+		<meta name="yandex-verification" content="yandex" />
+		<meta name="yahoo-site-verification" content="yahoo" />
+		<meta name="description" content={description} />
+		<meta name="yandex-verification" content="2f848a06f521e7bb" />
+		<link rel="canonical" href="https://Instant-studio.su/" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header client:load />
+		<slot />
+		<Footer client:load />
+	</body>
+</html>

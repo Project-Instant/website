@@ -1,0 +1,102 @@
+---
+import { Button } from "#ui/button";
+import { SectionWrapper } from "#components/wrappers/section-wrapper";
+import { TargetPageWrapper } from "#components/wrappers/target-page-wrapper";
+import Layout from "#layouts/Layout.astro";
+---
+
+<Layout
+  title="Telegram bot"
+  description="What is a telegram bot? Instant will explain!"
+>
+  <div class="flex flex-col w-full h-full min-h-screen pt-40 lg:pt-24">
+    <TargetPageWrapper
+      title="Telegram bot"
+      description="this is an account in the messenger programmed to automatically perform actions: send advertising messages, provide product consultations, or sell them."
+      anchor="tg-bot-information"
+      backgroundColor="bg-gray-700"
+    />
+    <div id="tg-bot-information" class="flex flex-col">
+      <SectionWrapper id="tg-bot-pluses" title="Advantages of a Telegram bot">
+        <ul class="flex flex-col gap-2 *:text-lg *:text-white">
+          <li>
+            <p>- time and money saving</p>
+          </li>
+          <li>
+            <p>- seamless ecosystem</p>
+          </li>
+          <li>
+            <p>- attracting, retaining, and returning customers</p>
+          </li>
+          <li>
+            <p>- expanding advertising opportunities</p>
+          </li>
+          <li>
+            <p>- segmentation and personalization</p>
+          </li>
+          <li>
+            <p>- effective referral system</p>
+          </li>
+          <li>
+            <p>- a large number of functions</p>
+          </li>
+        </ul>
+      </SectionWrapper>
+      <SectionWrapper id="tg-bot-how-to-work" title="How the bot works">
+        <div class="flex flex-row gap-4 *:text-md lg:*:text-lg *:text-white">
+          <div class="flex flex-col gap-y-6">
+            <p>
+              Telegram applies one common format for bots. They differ from real
+              users only by the addition of \"_bot\" in their names.
+            </p>
+            <ul class="flex flex-col gap-y-2">
+              <li>
+                <p>There are several types of bots:</p>
+              </li>
+              <li>
+                <p>
+                  - chat bots. Generate simple dialogs on a specific topic set
+                  by the user.
+                </p>
+              </li>
+              <li>
+                <p>
+                  - informational bots. The main task of such bots is to inform
+                  the user about certain events.
+                </p>
+              </li>
+              <li>
+                <p>
+                  - game bots. These robots allow you to play various games.
+                  Mostly we are talking about textual versions of various games
+                  from Combats.ru times.
+                </p>
+              </li>
+              <li>
+                <p>
+                  - assistant bots. They are additions to the web versions of
+                  online services.
+                </p>
+              </li>
+            </ul>
+            <p>
+              In fact, there is no clear basis for classifying bots. The point
+              is that they usually combine several mechanics and effectively
+              perform a whole range of tasks. They help translate texts, learn,
+              test, find information, play games, and even use other services
+              and interact with things that have access to the global network
+              (today's popular "internet of things").
+            </p>
+          </div>
+        </div>
+      </SectionWrapper>
+    </div>
+    <div class="wrapper w-fit mb-12">
+      <a href="/#contacts">
+        <Button>
+          <p class="text-lg text-white font-medium">Contact Us</p>
+        </Button>
+      </a>
+    </div>
+  </div>
+</Layout>

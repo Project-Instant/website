@@ -1,0 +1,32 @@
+{
+  "name": "studio-renew",
+  "type": "module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/solid-js": "5.0.5",
+    "@kobalte/core": "0.13.9",
+    "@kobalte/tailwindcss": "0.9.0",
+    "@solid-primitives/event-listener": "2.4.0",
+    "@solid-primitives/intersection-observer": "2.2.0",
+    "@solid-primitives/spring": "0.1.0",
+    "@tailwindcss/vite": "4.0.14",
+    "astro": "5.5.2",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-solid": "0.482.0",
+    "shadcn-solid": "0.7.5",
+    "solid-devtools": "0.33.0",
+    "solid-js": "1.9.5",
+    "tailwind-merge": "3.0.2",
+    "tailwindcss": "4.0.14",
+    "tailwindcss-animate": "1.0.7"
+  },
+  "packageManager": "yarn@4.7.0+sha512.5a0afa1d4c1d844b3447ee3319633797bcd6385d9a44be07993ae52ff4facabccafb4af5dcd1c2f9a94ac113e5e9ff56f6130431905884414229e284e37bb7c9"
+}

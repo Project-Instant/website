@@ -1,0 +1,90 @@
+---
+import { Button } from "#ui/button";
+import { SectionWrapper } from "#components/wrappers/section-wrapper";
+import { ImageWithAnnotation } from "#ui/image-annotation";
+import { TargetPageWrapper } from "#components/wrappers/target-page-wrapper";
+import Layout from "#layouts/Layout.astro";
+---
+
+<Layout
+  title="Landing"
+  description="What is a landing page? Instant will explain!"
+>
+  <div class="flex flex-col w-full h-full min-h-screen pt-36 lg:pt-24">
+    <TargetPageWrapper
+      client:load
+      title="Landing"
+      description="this is a separate page created for marketing or advertising purposes to increase conversions."
+      anchor="landing-information"
+      backgroundColor="bg-blue-800"
+    />
+    <div id="landing-information" class="flex flex-col">
+      <SectionWrapper
+        client:load
+        id="landing-pluses"
+        title="Landing page advantages"
+      >
+        <ul class="flex flex-col gap-2 *:text-md lg:*:text-lg *:text-white">
+          <li>
+            <p>- simple lead generation</p>
+          </li>
+          <li>
+            <p>- collecting client data</p>
+          </li>
+          <li>
+            <p>- improving SEO performance</p>
+          </li>
+          <li>
+            <p>- great opportunity to promote new products</p>
+          </li>
+          <li>
+            <p>- streamlined decision-making process</p>
+          </li>
+        </ul>
+      </SectionWrapper>
+      <SectionWrapper
+        client:load
+        id="landing-how-to-work"
+        title="How does the landing page work?"
+      >
+        <div
+          class="flex flex-col lg:flex-row gap-4 *:text-md lg:*:text-lg *:text-white"
+        >
+          <div class="flex flex-col gap-y-6">
+            <p>
+              Landing works extremely simply. After clicking a link, the user is
+              taken to a landing page that showcases a special offer or
+              describes a specific product.
+            </p>
+            <p>
+              The main element of the landing page is a clear CTA, quality
+              image, and text that encourages people to fill out a subscription
+              form. To access the special offer, the user needs to leave their
+              details — thus becoming a lead.
+            </p>
+            <div class="flex flex-col gap-y-1">
+              <p>The key components of a landing page are:</p>
+              <p>- captivating headline</p>
+              <p>- relevant text</p>
+              <p>- attention-grabbing images</p>
+              <p>- features and benefits</p>
+              <p>- subscription form</p>
+            </div>
+          </div>
+          <ImageWithAnnotation
+            propSrc="/images/landing-duolingo.png"
+            propAlt="Duo example"
+            annotation="Example of a landing page using Duolingo"
+          />
+        </div>
+      </SectionWrapper>
+    </div>
+    <div class="wrapper w-fit mb-12">
+      <a href="/#contacts">
+        <Button client:load>
+          <p class="text-lg text-white font-medium">Contact Us</p>
+        </Button>
+      </a>
+    </div>
+  </div>
+</Layout>
