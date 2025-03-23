@@ -3,6 +3,8 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@tailwindcss/vite";
 import solidJs from '@astrojs/solid-js';
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   prefetch: true,
@@ -15,9 +17,8 @@ export default defineConfig({
     locales: ["ru", "en"],
     defaultLocale: "en",
   },
-  integrations: [
-    solidJs({ 
-      devtools: true 
-    })
-  ]
+  site: "https://instant-website-beta.vercel.app",
+  integrations: [solidJs({ 
+    devtools: true 
+  }), sitemap()]
 });

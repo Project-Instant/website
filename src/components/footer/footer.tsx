@@ -1,5 +1,6 @@
 import { GradientSeparator } from "#ui/gradient-separator"
 import type { Component } from "solid-js"
+import LogotypeWthtBg from "#assets/images/miniatures/logotype_wtht_bg.png"
 
 export const Footer: Component = () => {
   return (
@@ -9,7 +10,7 @@ export const Footer: Component = () => {
       <GradientSeparator direction="top" />
       <a href="/" class="select-none">
         <div class="flex justify-start items-center gap-x-1 py-2">
-          <img src="/white_var_wthbg.png" class="w-[36px] h-[36px]" width={36} height={36} alt="" />
+          <img src={LogotypeWthtBg.src} class="w-[36px] h-[36px]" width={36} height={36} alt="" />
           <p class="text-2xl mono-tag uppercase text-white leading-3 font-semibold">
             Instant
           </p>
