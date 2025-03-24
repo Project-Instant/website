@@ -17,7 +17,11 @@ import Layout from "#layouts/Layout.astro";
       backgroundColor="bg-gray-700"
     />
     <div id="tg-bot-information" class="flex flex-col">
-      <SectionWrapper id="tg-bot-pluses" title="Advantages of a Telegram bot">
+      <SectionWrapper
+        client:load
+        id="tg-bot-pluses"
+        title="Advantages of a Telegram bot"
+      >
         <ul class="flex flex-col gap-2 *:text-lg *:text-white">
           <li>
             <p>- time and money saving</p>
@@ -42,7 +46,11 @@ import Layout from "#layouts/Layout.astro";
           </li>
         </ul>
       </SectionWrapper>
-      <SectionWrapper id="tg-bot-how-to-work" title="How the bot works">
+      <SectionWrapper
+        client:load
+        id="tg-bot-how-to-work"
+        title="How the bot works"
+      >
         <div class="flex flex-row gap-4 *:text-md lg:*:text-lg *:text-white">
           <div class="flex flex-col gap-y-6">
             <p>
@@ -93,7 +101,7 @@ import Layout from "#layouts/Layout.astro";
     </div>
     <div class="wrapper w-fit mb-12">
       <a href="/#contacts">
-        <Button>
+        <Button client:load>
           <p class="text-lg text-white font-medium">Contact Us</p>
         </Button>
       </a>

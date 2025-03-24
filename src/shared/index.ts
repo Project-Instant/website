@@ -3,7 +3,7 @@ import { Layers2, Bot } from 'lucide-solid';
 export type HeaderComponentType = {
   title: string,
   href: string,
-  nested?: Array<HeaderComponentType & { icon: any }>
+  nested?: Array<HeaderComponentType & { icon: any, description?: string }>
 }
 
 export const HEADER_SEGMENTS: HeaderComponentType[] = [
@@ -12,28 +12,30 @@ export const HEADER_SEGMENTS: HeaderComponentType[] = [
     href: "/#start",
   },
   {
-    title: "Services",
-    href: "/services",
-    nested: [
-      {
-        title: "Landing/Card",
-        href: "/landing",
-        icon: Layers2 
-      },
-      {
-        title: "Telegram bot",
-        href: "/tg-bot",
-        icon: Bot
-      }
-    ]
-  },
-  {
     title: "Portfolio",
     href: "/portfolio",
   },
   {
+    title: "Wiki",
+    href: "/wiki",
+    nested: [
+      {
+        title: "Landing/Card",
+        href: "/landing",
+        icon: Layers2,
+        description: "About landing and card websites"
+      },
+      {
+        title: "Telegram bot",
+        href: "/tg-bot",
+        icon: Bot,
+        description: "About telegram bots"
+      }
+    ]
+  },
+  {
     title: "Contacts",
-    href: "/#contact",
+    href: "/#contacts",
   },
 ]
 

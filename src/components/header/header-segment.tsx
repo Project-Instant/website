@@ -14,23 +14,31 @@ export const HeaderSegment: Component<HeaderSegmentProps> = ({
 				<DropdownMenu>
 					<DropdownMenuTrigger id={title}>
 						<Selected animation="spring">
-							<p class="inline mono-tag uppercase text-cod-gray-50 text-[15px] lg:text-base">
+							<p class="mono-tag uppercase text-cod-gray-50 text-base">
 								{title}
 							</p>
 						</Selected>
 					</DropdownMenuTrigger>
 					{nested && (
-						<DropdownMenuContent class="flex flex-col gap-y-2 w-fit lg:w-[260px]">
+						<DropdownMenuContent class="flex flex-col gap-y-2 lg:w-[300px]">
 							<For each={nested}>
-								{({ href: nestedHref, title, icon: Icon }) => (
-									<a href={href + nestedHref}>
+								{({ href: nestedHref, title, icon: Icon, description }) => (
+									<a href={href + nestedHref} onClick={(e) => e.stopPropagation()}>
 										<div class="flex group items-center gap-2 rounded-xl w-full px-4 py-2">
-											<div class="flex group-hover:bg-cod-gray-50 duration-300 bg-cod-gray-700 rounded-md p-2 items-center justify-center">
-												<Icon size={16} class="group-hover:text-cod-gray-800 duration-300 text-cod-gray-50"/>
+											<div class="flex duration-300 rounded-md p-2 items-center justify-center bg-cod-gray-700 group-hover:bg-cod-gray-50">
+												<Icon 
+													size={20} 
+													class="group-hover:text-cod-gray-800 duration-300 text-cod-gray-50"
+												/>
 											</div>
-											<p class="text-cod-gray-50 text-base font-medium">
-												{title}
-											</p>
+											<div class="flex flex-col">
+												<p class="text-cod-gray-50 text-base">
+													{title}
+												</p>
+												<span class="text-cod-gray-300 group-hover:text-cod-gray-50 text-sm">
+													{description}
+												</span>
+											</div>
 										</div>
 									</a>
 								)}
@@ -40,9 +48,9 @@ export const HeaderSegment: Component<HeaderSegmentProps> = ({
 				</DropdownMenu>
 			</Show>
 			<Show when={!nested}>
-				<a href={href}>
+				<a href={href} onClick={(e) => e.stopPropagation()}>
 					<Selected animation="spring">
-						<p class="inline mono-tag uppercase text-cod-gray-50 text-[15px] lg:text-base">
+						<p class="mono-tag uppercase text-cod-gray-50 text-base">
 							{title}
 						</p>
 					</Selected>

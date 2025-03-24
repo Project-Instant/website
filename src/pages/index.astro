@@ -6,6 +6,8 @@ import { Services } from "#components/sections/services";
 import { Ripple } from "#ui/ripple";
 import { RainbowButton } from "#ui/rainbow-button";
 import { Button } from "#ui/button";
+import { Loader } from "#ui/loader";
+import { CreateOrder } from "#components/sections/create-order";
 ---
 
 <Layout title="Welcome">
@@ -32,7 +34,7 @@ import { Button } from "#ui/button";
 			<div
 				class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
 			>
-				<a href="#contact">
+				<a href="#create-order">
 					<RainbowButton client:load>
 						<span class="text-cod-gray-800 text-lg font-semibold">
 							🚀&nbsp;&nbsp;Create a order
@@ -48,9 +50,10 @@ import { Button } from "#ui/button";
 		</div>
 	</div>
 	<SectionWrapper client:load id="available-services" title="Our Services">
-		<Services />
+		<Services client:load />
 	</SectionWrapper>
 	<SectionWrapper client:load id="pricing" title="Cost of Services">
-		<Pricing />
+		<Pricing client:load />
 	</SectionWrapper>
+	<CreateOrder client:visible/>
 </Layout>
