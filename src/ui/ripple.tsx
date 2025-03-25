@@ -9,9 +9,9 @@ interface RippleProps extends JSX.HTMLAttributes<HTMLDivElement> {
 
 export const Ripple: Component<RippleProps> = (props) => {
   const {
-    mainCircleSize = 210,
-    mainCircleOpacity = 0.24,
-    numCircles = 8,
+    mainCircleSize = 512,
+    mainCircleOpacity = 0.32,
+    numCircles = 12,
     class: className,
     ...restProps
   } = props;
@@ -28,7 +28,7 @@ export const Ripple: Component<RippleProps> = (props) => {
         {(i) => {
           const size = mainCircleSize + i * 70;
           const opacity = mainCircleOpacity - i * 0.03;
-          const animationDelay = `${i * 0.06}s`;
+          const animationDelay = `${i * 0.12}s`;
           const borderStyle = i === numCircles - 1 ? "dashed" : "solid";
           const borderOpacity = 5 + i * 5;
 

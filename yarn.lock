@@ -860,6 +860,71 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@motionone/animation@npm:^10.18.0":
+  version: 10.18.0
+  resolution: "@motionone/animation@npm:10.18.0"
+  dependencies:
+    "@motionone/easing": "npm:^10.18.0"
+    "@motionone/types": "npm:^10.17.1"
+    "@motionone/utils": "npm:^10.18.0"
+    tslib: "npm:^2.3.1"
+  checksum: 10c0/83c01ab8ecf5fae221e5012116c4c49d4473ba88ba22197e1d8c1e39364c5c6b9c5271e57ae716fd21f92314d15c63788c48d0a30872ee8d72337e1d98b46834
+  languageName: node
+  linkType: hard
+
+"@motionone/dom@npm:^10.17.0":
+  version: 10.18.0
+  resolution: "@motionone/dom@npm:10.18.0"
+  dependencies:
+    "@motionone/animation": "npm:^10.18.0"
+    "@motionone/generators": "npm:^10.18.0"
+    "@motionone/types": "npm:^10.17.1"
+    "@motionone/utils": "npm:^10.18.0"
+    hey-listen: "npm:^1.0.8"
+    tslib: "npm:^2.3.1"
+  checksum: 10c0/3bd4b1015e88464c9effc170c23bc63bbc910cbb9ca84986ec19ca82e0e13335e63a1f0d12e265fbe93616fe864fc2aec4e952d51e07932894e148de6fac2111
+  languageName: node
+  linkType: hard
+
+"@motionone/easing@npm:^10.18.0":
+  version: 10.18.0
+  resolution: "@motionone/easing@npm:10.18.0"
+  dependencies:
+    "@motionone/utils": "npm:^10.18.0"
+    tslib: "npm:^2.3.1"
+  checksum: 10c0/0adf9b7086b0f569d28886890cc0725a489285f2debfcaf27c1c15dfef5736c9f4207cfda14c71b3275f8163777320cb7ff48ad263c7f4ccd31e12a5afc1a952
+  languageName: node
+  linkType: hard
+
+"@motionone/generators@npm:^10.18.0":
+  version: 10.18.0
+  resolution: "@motionone/generators@npm:10.18.0"
+  dependencies:
+    "@motionone/types": "npm:^10.17.1"
+    "@motionone/utils": "npm:^10.18.0"
+    tslib: "npm:^2.3.1"
+  checksum: 10c0/7ed7dda5ac58cd3e8dd347b5539d242d96e02ee16fef921c8d14295a806e6bc429a15291461ec078977bd5f6162677225addd707ca79f808e65bc3599c45c0e9
+  languageName: node
+  linkType: hard
+
+"@motionone/types@npm:^10.17.1":
+  version: 10.17.1
+  resolution: "@motionone/types@npm:10.17.1"
+  checksum: 10c0/f7b16cd4f0feda0beac10173afa6de7384722f9f24767f78b7aa90f15b8a89d584073a64387b015a8e015a962fa4b47a8ce23621f47708a08676b12bb0d43bbb
+  languageName: node
+  linkType: hard
+
+"@motionone/utils@npm:^10.17.0, @motionone/utils@npm:^10.18.0":
+  version: 10.18.0
+  resolution: "@motionone/utils@npm:10.18.0"
+  dependencies:
+    "@motionone/types": "npm:^10.17.1"
+    hey-listen: "npm:^1.0.8"
+    tslib: "npm:^2.3.1"
+  checksum: 10c0/db57dbb6a131fab36dc1eb4e1f3a4575ca97563221663adce54c138de1e1a9eaf4a4a51ddf99fdab0341112159e0190b35cdeddfdbd08ba3ad1e35886a5324bb
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1306,7 +1371,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@solid-primitives/props@npm:^3.1.8":
+"@solid-primitives/props@npm:^3.1.11, @solid-primitives/props@npm:^3.1.8":
   version: 3.2.0
   resolution: "@solid-primitives/props@npm:3.2.0"
   dependencies:
@@ -1402,6 +1467,15 @@ __metadata:
   peerDependencies:
     solid-js: ^1.6.12
   checksum: 10c0/7a99628e3c82117316cbb22ed097100d84d718678eb314da499be8826cba378b7649a96ed3c7469b068cd70db6118c060502eb1158b1634b19e324c0063f81c2
+  languageName: node
+  linkType: hard
+
+"@solid-primitives/transition-group@npm:^1.0.5":
+  version: 1.1.0
+  resolution: "@solid-primitives/transition-group@npm:1.1.0"
+  peerDependencies:
+    solid-js: ^1.6.12
+  checksum: 10c0/64e6e2f6360eb61b2ed70d3dce2bad9ea63d3e7a4185015077c3d977213ee2f4c3da3bf3c92d8ad301bb036fd6150102711506a52c899007899f501ccd7d7ce0
   languageName: node
   linkType: hard
 
@@ -2101,7 +2175,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"class-variance-authority@npm:0.7.1":
+"class-variance-authority@npm:^0.7.1":
   version: 0.7.1
   resolution: "class-variance-authority@npm:0.7.1"
   dependencies:
@@ -2238,7 +2312,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.1.0":
+"csstype@npm:^3.1.0, csstype@npm:^3.1.3":
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10c0/80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
@@ -2655,6 +2729,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "framer-motion@npm:12.5.0"
+  dependencies:
+    motion-dom: "npm:^12.5.0"
+    motion-utils: "npm:^12.5.0"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/ac632ea3a452e473abf9adad1d6777522b1dd2ed8cf567078a9997f07a388d7b9e68a3e9c102b1807e1e88af3d83eb2eb0d9476032059f4803a0c32bded9bf74
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^3.0.0":
   version: 3.0.3
   resolution: "fs-minipass@npm:3.0.3"
@@ -2904,6 +3000,13 @@ __metadata:
     property-information: "npm:^7.0.0"
     space-separated-tokens: "npm:^2.0.0"
   checksum: 10c0/18dc8064e5c3a7a2ae862978e626b97a254e1c8a67ee9d0c9f06d373bba155ed805fc5b5ce21b990fb7bc174624889e5e1ce1cade264f1b1d58b48f994bc85ce
+  languageName: node
+  linkType: hard
+
+"hey-listen@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "hey-listen@npm:1.0.8"
+  checksum: 10c0/38db3028b4756f3d536c0f6a92da53bad577ab649b06dddfd0a4d953f9a46bbc6a7f693c8c5b466a538d6d23dbc469260c848427f0de14198a2bbecbac37b39e
   languageName: node
   linkType: hard
 
@@ -4051,6 +4154,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"motion-dom@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "motion-dom@npm:12.5.0"
+  dependencies:
+    motion-utils: "npm:^12.5.0"
+  checksum: 10c0/32e6029a14c23a82392253ecd5349f3d7c603edac6e214357c6657560c90dff42163b40d7a9d93cd31c6eaded39765e115a1abf137496baec27942803f4bc56e
+  languageName: node
+  linkType: hard
+
+"motion-utils@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "motion-utils@npm:12.5.0"
+  checksum: 10c0/f556240efda96a4bb86b13bb0e6cad689b2665ca688b2616585a7c7db182e3b8d93377ff1fb3782ca0088a4a8aa6dd5e47e81fda5c19ab334f01812eade639ef
+  languageName: node
+  linkType: hard
+
+"motion@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "motion@npm:12.5.0"
+  dependencies:
+    framer-motion: "npm:^12.5.0"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/0ebc6bea6b4d64b1d07436bd16ab5e6c82f52fb424b4012c1347b8cfa8aa1b8d38d151a2bff47f92f6e69e55f32a84c6558d0a4b71ee824bc08e22f5f33cf152
+  languageName: node
+  linkType: hard
+
 "mrmime@npm:^2.0.1":
   version: 2.0.1
   resolution: "mrmime@npm:2.0.1"
@@ -4967,6 +5107,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"solid-motionone@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "solid-motionone@npm:1.0.3"
+  dependencies:
+    "@motionone/dom": "npm:^10.17.0"
+    "@motionone/utils": "npm:^10.17.0"
+    "@solid-primitives/props": "npm:^3.1.11"
+    "@solid-primitives/refs": "npm:^1.0.8"
+    "@solid-primitives/transition-group": "npm:^1.0.5"
+    csstype: "npm:^3.1.3"
+  peerDependencies:
+    solid-js: ^1.8.0
+  checksum: 10c0/4c037717f4cba927537fb9cbd3c3c68d8ef510e3b0c0d044c8a2ab31f28a708b8274418fb75f24b6547132f62c197286089b7c12d463ac2b8c44180440e6fa52
+  languageName: node
+  linkType: hard
+
 "solid-presence@npm:^0.1.8":
   version: 0.1.8
   resolution: "solid-presence@npm:0.1.8"
@@ -5127,13 +5283,15 @@ __metadata:
     "@solid-primitives/spring": "npm:0.1.0"
     "@tailwindcss/vite": "npm:4.0.14"
     astro: "npm:5.5.2"
-    class-variance-authority: "npm:0.7.1"
+    class-variance-authority: "npm:^0.7.1"
     clsx: "npm:2.1.1"
     lucide-solid: "npm:0.482.0"
+    motion: "npm:^12.5.0"
     shadcn-solid: "npm:0.7.5"
     sharp: "npm:^0.33.5"
     solid-devtools: "npm:0.33.0"
     solid-js: "npm:1.9.5"
+    solid-motionone: "npm:^1.0.3"
     tailwind-merge: "npm:3.0.2"
     tailwindcss: "npm:4.0.14"
     tailwindcss-animate: "npm:1.0.7"
@@ -5260,7 +5418,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0, tslib@npm:^2.8.0":
+"tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.8.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62

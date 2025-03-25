@@ -4,10 +4,11 @@ import LogotypeWthtBg from "#assets/images/miniatures/logotype_wtht_bg.png"
 
 export const Footer: Component = () => {
   return (
-    <div
-      class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:grid-cols-4 lg:grid-rows-1 py-16 wrapper relative overflow-hidden w-full"
-    >
+    <div class="flex flex-col wrapper relative gap-12 justify-between overflow-hidden mt-6 pt-16 pb-8">
       <GradientSeparator direction="top" />
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 w-full gap-6 lg:grid-cols-4 lg:grid-rows-1"
+    >
       <a href="/" class="select-none">
         <div class="flex justify-start items-center gap-x-1 py-2">
           <img src={LogotypeWthtBg.src} class="w-[36px] h-[36px]" width={36} height={36} alt="" />
@@ -51,6 +52,12 @@ export const Footer: Component = () => {
             <p class="text-md text-cod-gray-50">Telegram</p>
           </a>
         </div>
+      </div>
+    </div>
+      <div class="flex items-center justify-center w-full">
+        <span class="text-cod-gray-300 text-base mono-tag font-medium">
+          Copyright © {new Date().getFullYear()} Instant. All Rights Reserved.
+        </span>
       </div>
     </div>
   )

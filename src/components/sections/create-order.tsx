@@ -1,21 +1,27 @@
+import { Noise } from "#ui/noise"
 import type { Component } from "solid-js"
 
-const CreateOrderForm: Component = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+export const CREATE_ORDER_ID = "create-order"
 
 export const CreateOrder: Component = () => {
   return (
-    <div
-      class="w-full wrapper"
+    <a
+      id={CREATE_ORDER_ID}
+      href="mailto:piterschimpson@gmail.com"
+      class="flex relative wrapper rounded-xl bg-cod-gray-900/10 overflow-hidden group h-[200px]"
     >
-      <div class="flex flex-col bg-cod-gray-900 rounded-xl p-6 w-full min-h-[200px] h-full">
-        <CreateOrderForm/>
+      <Noise
+        patternSize={250}
+        patternScaleX={1}
+        patternScaleY={1}
+        patternRefreshInterval={2}
+        patternAlpha={15}
+      />
+      <div class="flex flex-col justify-center items-center w-full h-full">
+        <span class="mono-tag font-bold text-5xl duration-300 ease-in-out text-cod-gray-300 group-hover:text-cod-gray-50">
+          Build It!
+        </span>
       </div>
-    </div>
+    </a>
   )
 }

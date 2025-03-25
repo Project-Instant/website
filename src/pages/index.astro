@@ -1,59 +1,108 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "#layouts/Layout.astro";
 import { SectionWrapper } from "#components/wrappers/section-wrapper";
 import { Pricing } from "#components/sections/pricing";
 import { Services } from "#components/sections/services";
 import { Ripple } from "#ui/ripple";
 import { RainbowButton } from "#ui/rainbow-button";
 import { Button } from "#ui/button";
-import { Loader } from "#ui/loader";
-import { CreateOrder } from "#components/sections/create-order";
+import {
+	CREATE_ORDER_ID,
+	CreateOrder,
+} from "#components/sections/create-order";
+import { DecryptedText } from "#ui/text";
 ---
 
 <Layout title="Welcome">
+	<Ripple client:load class="-top-[812px]" />
 	<div
-		class="flex flex-col justify-center relative overflow-hidden lg:flex-row w-full h-full min-h-screen items-center gap-y-16 gap-x-32"
+		class="flex flex-col lg:flex-row justify-center items-center relative min-h-screen wrapper"
 	>
-		<Ripple client:load />
 		<div
-			class="flex relative items-center flex-col gap-y-12 w-full lg:w-4/5 lg:pt-0 wrapper"
+			class="flex items-center flex-col gap-12 w-full h-full lg:w-4/5 lg:pt-0"
 		>
-			<div class="flex flex-col items-center gap-y-6 w-full">
+			<div class="flex flex-col items-center gap-6 w-full">
+				<DecryptedText
+					text="Top-tier development. No compromises."
+					client:load
+					parentClassName="font-bold text-center text-4xl xl:text-6xl 2xl:text-7xl text-white cursor-default"
+				/>
 				<span
-					class="font-bold text-center text-4xl xl:text-6xl 2xl:text-7xl text-white"
+					class="text-cod-gray-300 text-center text-lg xl:text-xl 2xl:text-2xl font-medium cursor-default"
 				>
-					The best developments are only with us
-				</span>
-				<span
-					class="text-cod-gray-300 text-center text-lg xl:text-xl 2xl:text-2xl font-medium"
-				>
-					We specialize in developing websites of various levels: from simple
-					landing pages to markets.
+					We craft solutions with precision and innovation.
 				</span>
 			</div>
 			<div
 				class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
 			>
-				<a href="#create-order">
+				<a href={`#${CREATE_ORDER_ID}`}>
 					<RainbowButton client:load>
 						<span class="text-cod-gray-800 text-lg font-semibold">
-							🚀&nbsp;&nbsp;Create a order
+							🚀&nbsp;&nbsp;Let's Build Together
 						</span>
 					</RainbowButton>
 				</a>
-				<Button client:load class="border px-8 border-cod-gray-400 rounded-xl">
-					<span class="text-cod-gray-50 text-lg font-semibold">
-						About Instant
-					</span>
-				</Button>
+				<a href="#about">
+					<Button
+						client:load
+						class="border px-8 border-cod-gray-400 rounded-xl"
+					>
+						<span class="text-cod-gray-50 text-lg font-semibold">
+							About Instant
+						</span>
+					</Button>
+				</a>
 			</div>
 		</div>
 	</div>
-	<SectionWrapper client:load id="available-services" title="Our Services">
+	<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 wrapper relative my-16">
+		<div class="flex items-center gap-2">
+			<div class="w-[4px] h-full bg-cod-gray-400"></div>
+			<div class="flex flex-col">
+				<p class="text-cod-gray-50 text-lg font-semibold">
+					Innovation & Quality
+				</p>
+				<p class="text-cod-gray-300 text-lg">
+					We build high-performance digital products, from landing pages to SaaS
+					platforms. Every project is crafted with precision, ensuring seamless
+					UI/UX and modern technology.
+				</p>
+			</div>
+		</div>
+		<div class="flex items-center gap-2">
+			<div class="w-[4px] h-full bg-cod-gray-400"></div>
+			<div class="flex flex-col">
+				<p class="text-cod-gray-50 text-lg font-semibold">
+					Full-Cycle Development
+				</p>
+				<p class="text-cod-gray-300 text-lg">
+					From frontend to backend, we handle the entire development process.
+					Our solutions are scalable, efficient, and tailored to meet your
+					business goals.
+				</p>
+			</div>
+		</div>
+		<div class="flex items-center gap-2">
+			<div class="w-[4px] h-full bg-cod-gray-400"></div>
+			<div class="flex flex-col">
+				<p class="text-cod-gray-50 text-lg font-semibold">
+					Results-Driven Approach
+				</p>
+				<p class="text-cod-gray-300 text-lg">
+					We focus on creating powerful and reliable web applications—corporate
+					websites, e-commerce platforms, dashboards, and more—to help your
+					business grow.
+				</p>
+			</div>
+		</div>
+		<div id="about" class="h-[2px] opacity-0 w-full absolute border-white left-0 right-0 border bottom-48"/>
+	</div>
+	<SectionWrapper client:load id="available-services" title="Build this">
 		<Services client:load />
 	</SectionWrapper>
-	<SectionWrapper client:load id="pricing" title="Cost of Services">
+	<SectionWrapper client:load id="pricing" title="Pricing">
 		<Pricing client:load />
 	</SectionWrapper>
-	<CreateOrder client:visible/>
+	<CreateOrder client:visible />
 </Layout>

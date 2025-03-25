@@ -10,7 +10,7 @@ import Layout from "#layouts/Layout.astro";
   title="Landing"
   description="What is a landing page? Instant will explain!"
 >
-  <div class="flex flex-col w-full h-full min-h-screen pt-36 lg:pt-24">
+  <div class="flex flex-col w-full h-full items-center min-h-screen pt-36 lg:pt-24">
     <TargetPageWrapper
       client:load
       title="Landing"
@@ -18,7 +18,7 @@ import Layout from "#layouts/Layout.astro";
       anchor="landing-information"
       backgroundColor="bg-blue-800"
     />
-    <div id="landing-information" class="flex flex-col">
+    <div id="landing-information" class="flex flex-col wrapper">
       <SectionWrapper
         client:load
         id="landing-pluses"

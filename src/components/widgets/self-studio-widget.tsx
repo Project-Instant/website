@@ -22,7 +22,7 @@ export const SelfStudioWidget: Component = () => {
             loading="lazy"
           />
           <p class="text-md text-white font-medium">
-            Dev. by Instant
+            Made in Instant
           </p>
         </div>
       </div>

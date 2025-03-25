@@ -3,20 +3,21 @@ import { Button } from "#ui/button";
 import { SectionWrapper } from "#components/wrappers/section-wrapper";
 import { TargetPageWrapper } from "#components/wrappers/target-page-wrapper";
 import Layout from "#layouts/Layout.astro";
+import { CREATE_ORDER_ID } from "#components/sections/create-order";
 ---
 
 <Layout
   title="Telegram bot"
   description="What is a telegram bot? Instant will explain!"
 >
-  <div class="flex flex-col w-full h-full min-h-screen pt-40 lg:pt-24">
+  <div class="flex flex-col items-center h-full min-h-screen pt-40 lg:pt-24">
     <TargetPageWrapper
       title="Telegram bot"
       description="this is an account in the messenger programmed to automatically perform actions: send advertising messages, provide product consultations, or sell them."
       anchor="tg-bot-information"
       backgroundColor="bg-gray-700"
     />
-    <div id="tg-bot-information" class="flex flex-col">
+    <div id="tg-bot-information" class="flex flex-col wrapper">
       <SectionWrapper
         client:load
         id="tg-bot-pluses"
@@ -100,7 +101,7 @@ import Layout from "#layouts/Layout.astro";
       </SectionWrapper>
     </div>
     <div class="wrapper w-fit mb-12">
-      <a href="/#contacts">
+      <a href={`/#${CREATE_ORDER_ID}`}>
         <Button client:load>
           <p class="text-lg text-white font-medium">Contact Us</p>
         </Button>
