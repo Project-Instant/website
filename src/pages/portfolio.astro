@@ -7,15 +7,15 @@ import { Portfolio as PortfolioComponent } from "#components/sections/portfolio"
 ---
 
 <Layout title="Portfolio">
-	<div class="flex w-full h-full my-12">
+	  <div class="flex flex-col items-center w-full h-full min-h-screen pt-40 lg:pt-24">
+ <div class="flex flex-col wrapper">
 		<SectionWrapper
 			client:load
 			id="portfolio-cases"
 			title="Examples of Our Works"
 		>
-			<div class="grid gap-4">
 				<PortfolioComponent client:load />
-			</div>
 		</SectionWrapper>
 	</div>
+</div>
 </Layout>
