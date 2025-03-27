@@ -12,7 +12,7 @@ export const Pricing: Component = () => {
 								{item.name}
 							</p>
 							<p class="text-white text-xl">
-								Price: from {item.price.usd}
+								Price: from {item.price}
 							</p>
 						</div>
 					</div>

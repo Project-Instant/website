@@ -10,11 +10,13 @@ import {
 	CREATE_ORDER_ID,
 	CreateOrder,
 } from "#components/sections/create-order";
-import { DecryptedText } from "#ui/text";
+import { DecryptedText } from "#ui/decrypted-text";
 ---
 
 <Layout title="Welcome">
-	<Ripple client:load class="-top-[812px]" />
+	<div class="absolute h-dvh w-full overflow-hidden">
+		<Ripple client:load class="-top-[812px]" />
+	</div>
 	<div
 		class="flex flex-col lg:flex-row justify-center items-center relative min-h-screen wrapper"
 	>

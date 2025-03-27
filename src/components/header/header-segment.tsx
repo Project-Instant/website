@@ -25,11 +25,8 @@ export const HeaderSegment: Component<HeaderSegmentProps> = ({
 								{({ href: nestedHref, title, icon: Icon, description }) => (
 									<a href={href + nestedHref} onClick={(e) => e.stopPropagation()}>
 										<div class="flex group items-center gap-2 rounded-xl w-full px-4 py-2">
-											<div class="flex duration-300 rounded-md p-2 items-center justify-center bg-cod-gray-700 group-hover:bg-cod-gray-50">
-												<Icon 
-													size={20} 
-													class="group-hover:text-cod-gray-800 duration-300 text-cod-gray-50"
-												/>
+											<div class="flex duration-300 rounded-md *:duration-300 p-2 items-center justify-center bg-cod-gray-700 group-hover:bg-cod-gray-50">
+												<Icon size={20} class="group-hover:text-cod-gray-800 text-cod-gray-50" />
 											</div>
 											<div class="flex flex-col">
 												<p class="text-cod-gray-50 text-base">

@@ -35,11 +35,9 @@ export const HEADER_SEGMENTS: HeaderComponentType[] = [
   },
   {
     title: "Contacts",
-    href: "/#contacts",
+    href: "/contacts",
   },
 ]
-
-export const GLOBAL_SITE_HREF = "https://pureawake-studio.su"
 
 export const RUSSIAN_SH: "ru" = "ru";
 export const ENGLISH_SH: "en" = "en";
@@ -68,24 +66,15 @@ export const LANGUAGE_LIST: LanguageListType[] = [
 export const PRICING_LIST = [
   {
     name: "Landing",
-    price: {
-      rub: "6000₽",
-      usd: "$100"
-    }
+    price: "100$"
   },
   {
     name: "Business card website",
-    price: {
-      rub: "12000₽",
-      usd: "$200"
-    }
+    price: "200$"
   },
   {
     name: "Telegram bot",
-    price: {
-      rub: "зависит от сложности",
-      usd: "depends on complexity"
-    }
+    price: "depends on complexity"
   }
 ]
 
