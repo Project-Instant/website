@@ -8,34 +8,34 @@ export type HeaderComponentType = {
 
 export const HEADER_SEGMENTS: HeaderComponentType[] = [
   {
-    title: "Start",
-    href: "/#start",
+    title: "О нас",
+    href: "/#about",
   },
   {
-    title: "Portfolio",
+    title: "Портфолио",
     href: "/portfolio",
   },
   {
-    title: "Wiki",
+    title: "Справочник",
     href: "/wiki",
     nested: [
       {
-        title: "Landing/Card",
+        title: "Лендинг",
         href: "/landing",
         icon: Layers2,
-        description: "About landing and card websites"
+        description: "Немного теории о лендингах"
       },
       {
-        title: "Telegram bot",
+        title: "Телеграм-бот",
         href: "/tg-bot",
         icon: Bot,
-        description: "About telegram bots"
+        description: "Зачем нужны тг-боты"
       }
     ]
   },
   {
-    title: "Contacts",
-    href: "/contacts",
+    title: "Связаться",
+    href: "/#contacts",
   },
 ]
 
@@ -65,30 +65,30 @@ export const LANGUAGE_LIST: LanguageListType[] = [
 
 export const PRICING_LIST = [
   {
-    name: "Landing",
-    price: "100$"
+    name: "Лендинг",
+    price: "от 14000 RUB"
   },
   {
-    name: "Business card website",
-    price: "200$"
+    name: "Одностраничный сайт",
+    price: "от 6000 RUB"
   },
   {
-    name: "Telegram bot",
-    price: "depends on complexity"
+    name: "Телеграм-бот",
+    price: "от 6000 RUB"
   }
 ]
 
 export const SERVICES_LIST = [
   {
-    name: "Landing",
+    name: "Лендинг",
     description: "This is a page that will help you sell your services more effectively."
   },
   {
-    name: "Business card website",
+    name: "Одностраничник",
     description: "A website with all the information about your project"
   },
   {
-    name: "Telegram bot",
+    name: "Телеграм-бот",
     description: "Bots for your own needs or to attract clients"
   },
 ]

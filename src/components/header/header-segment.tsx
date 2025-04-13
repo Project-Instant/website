@@ -47,7 +47,7 @@ export const HeaderSegment: Component<HeaderSegmentProps> = ({
 			<Show when={!nested}>
 				<a href={href} onClick={(e) => e.stopPropagation()}>
 					<Selected animation="spring">
-						<p class="mono-tag uppercase text-cod-gray-50 text-base">
+						<p class="mono-tag uppercase text-nowrap text-cod-gray-50 text-base">
 							{title}
 						</p>
 					</Selected>

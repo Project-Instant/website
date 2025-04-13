@@ -10,7 +10,7 @@ export const GetWebsiteButton: Component = () => {
     >
       <Plus size={20} class="text-cod-gray-50" />
       <span class="mono-tag uppercase text-cod-gray-50">
-        Get in Touch
+        Заказать
       </span>
     </a>
   )

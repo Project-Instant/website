@@ -17,9 +17,9 @@ export const ImageWithAnnotation: Component<IImageWithAnnotation> = ({
       <img
         src={propSrc}
         alt={propAlt}
-        width={400}
-        height={400}
-        class="w-full h-full object-cover rounded-xl"
+        width={1920}
+        height={1080}
+        class="w-full h-[320px] object-cover rounded-xl"
       />
       <p>{annotation}</p>
     </div>

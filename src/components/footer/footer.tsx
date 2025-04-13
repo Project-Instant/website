@@ -17,7 +17,7 @@ export const Footer: Component = () => {
           </p>
         </div>
       </a>
-      <div class="flex flex-col items-start lg:items-center gap-y-2 w-full">
+      {/* <div class="flex flex-col items-start lg:items-center gap-y-2 w-full">
         <div class="flex flex-col items-start gap-y-2">
           <p class="uppercase mono-tag text-cod-gray-400 text-lg">
             LEGAL
@@ -26,24 +26,24 @@ export const Footer: Component = () => {
             <p class="text-md text-cod-gray-50">Privacy</p>
           </a>
         </div>
-      </div>
+      </div> */}
       <div class="flex flex-col items-start lg:items-center gap-y-2 w-full">
         <div class="flex flex-col items-start gap-y-2">
           <p class="uppercase mono-tag text-cod-gray-400 text-lg">
-            RESOURCES
+            Ресурсы
           </p>
           <a href="/portfolio">
-            <p class="text-md text-cod-gray-50">Portfolio</p>
+            <p class="text-md text-cod-gray-50">Портфолио</p>
           </a>
-          <a href="#services">
-            <p class="text-md text-cod-gray-50">Services</p>
+          <a href="/#available-services">
+            <p class="text-md text-cod-gray-50">Услуги</p>
           </a>
         </div>
       </div>
       <div class="flex flex-col items-start lg:items-center gap-y-2 w-full">
         <div class="flex flex-col items-start gap-y-2">
           <p class="uppercase mono-tag text-cod-gray-400 text-lg">
-            Contacts
+            Связь
           </p>
           <a href="mailto:piterschimpson@gmail.com">
             <p class="text-md text-cod-gray-50">Email</p>
@@ -56,7 +56,7 @@ export const Footer: Component = () => {
     </div>
       <div class="flex items-center justify-center w-full">
         <span class="text-cod-gray-300 text-base mono-tag font-medium">
-          Copyright © {new Date().getFullYear()} Instant. All Rights Reserved.
+         © {new Date().getFullYear()} Instant. Все права защищены.
         </span>
       </div>
     </div>

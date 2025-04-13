@@ -19,7 +19,7 @@ export const CreateOrder: Component = () => {
       />
       <div class="flex flex-col justify-center items-center w-full h-full">
         <span class="mono-tag font-bold text-5xl duration-300 ease-in-out text-cod-gray-300 group-hover:text-cod-gray-50">
-          Build It!
+          Заказать сайт
         </span>
       </div>
     </a>

@@ -1,18 +1,17 @@
 ---
-import { Button } from "#ui/button";
 import { SectionWrapper } from "#components/wrappers/section-wrapper";
 import { TargetPageWrapper } from "#components/wrappers/target-page-wrapper";
 import Layout from "#layouts/Layout.astro";
 ---
 
 <Layout
-  title="Site Card"
-  description="What is a business card website? Instant will explain!"
+  title="Одностраничный сайт"
+  description="Что такое сайт-визитка? Instant объяснит!"
 >
   <div class="flex flex-col items-center h-full min-h-screen pt-36 lg:pt-24">
     <TargetPageWrapper
-      title="Business card website"
-      description="this is an effective way to sell your services or products on multiple pages."
+      title="Сайт-визитка"
+      description="Эффективный способ рассказать о себе, своих услугах или товарах в лаконичном формате."
       anchor="site-card-information"
       backgroundColor="bg-purple-800"
     />
@@ -20,25 +19,25 @@ import Layout from "#layouts/Layout.astro";
       <SectionWrapper
         client:load
         id="site-card-pluses"
-        title="Advantages of a business card website"
+        title="Преимущества сайта-визитки"
       >
         <ul class="flex flex-col gap-2 *:text-md lg:*:text-lg *:text-white">
           <li>
-            <p>- static content</p>
+            <p>- Статичный, быстрый и лёгкий</p>
           </li>
           <li>
-            <p>- low cost of creating and maintaining the resource</p>
+            <p>- Минимальные затраты на запуск и поддержку</p>
           </li>
           <li>
-            <p>- stable traffic from geo-queries</p>
+            <p>- Стабильный трафик по геозапросам</p>
           </li>
           <li>
-            <p>- growth of user trust</p>
+            <p>- Повышает доверие клиентов</p>
           </li>
           <li>
             <p>
-              - transfer of the business card address online (via email,
-              messengers, and social networks).
+              - Удобно распространяется онлайн: по ссылке, в мессенджерах,
+              соцсетях или email
             </p>
           </li>
         </ul>
@@ -46,44 +45,35 @@ import Layout from "#layouts/Layout.astro";
       <SectionWrapper
         client:load
         id="site-card-how-to-work"
-        title="Who needs a business card website?"
+        title="Кому подойдёт сайт-визитка?"
       >
         <div class="flex flex-row gap-4 *:text-md lg:*:text-lg *:text-white">
           <div class="flex flex-col gap-y-6">
             <div class="flex flex-col gap-y-2">
               <p>
-                A business card website is the optimal form of presentation for
-                self-employed specialists, startups, and small companies. It is
-                used for business promotion:
+                Сайт-визитка — это отличный формат для начинающих
+                предпринимателей, фрилансеров и небольших компаний. Его
+                выбирают, когда нужно заявить о себе в интернете без лишних
+                затрат.
+              </p>
+              <p>Такой сайт подойдёт:</p>
+              <p>
+                - молодым брендам и стартапам, которым нужно присутствие в сети
+                и база для масштабирования;
               </p>
               <p>
-                - little-known companies in the early stages of entrepreneurship
-                and brand promotion. Over time, when a young business can afford
-                to increase its advertising budget, it transforms the business
-                card website into a full-fledged resource;
+                - малому и среднему бизнесу с офлайн-услугами — ремонт, клининг,
+                юриспруденция, бьюти-сфера, обучение и т.д.;
               </p>
               <p>
-                - small and medium-sized companies, private self-employed
-                individuals indicating geolocation and providing offline
-                services (trade, construction, repair, cleaning, jurisprudence,
-                accounting, pedagogy, beauty sphere, etc.);
-              </p>
-              <p>
-                - companies and individuals providing online services
-                (programming, design, translation, copywriting, etc.), whose
-                business cards can contain links to completed works (portfolio).
+                - фрилансерам и онлайн-специалистам (дизайнерам, программистам,
+                переводчикам), которым важно продемонстрировать портфолио и
+                контакты.
               </p>
             </div>
           </div>
         </div>
       </SectionWrapper>
-    </div>
-    <div class="wrapper w-fit mb-12">
-      <a href="/#contacts">
-        <Button client:load>
-          <p class="text-lg text-white font-medium">Contact Us</p>
-        </Button>
-      </a>
     </div>
   </div>
 </Layout>

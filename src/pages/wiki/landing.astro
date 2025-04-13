@@ -1,20 +1,19 @@
 ---
-import { Button } from "#ui/button";
 import { SectionWrapper } from "#components/wrappers/section-wrapper";
 import { ImageWithAnnotation } from "#ui/image-annotation";
 import { TargetPageWrapper } from "#components/wrappers/target-page-wrapper";
 import Layout from "#layouts/Layout.astro";
+import Example from "#assets/images/examples/duolingo-example.png";
 ---
 
-<Layout
-  title="Landing"
-  description="What is a landing page? Instant will explain!"
->
-  <div class="flex flex-col w-full h-full items-center min-h-screen pt-36 lg:pt-24">
+<Layout title="Лендинг" description="Что такое лендинг? Instant объяснит!">
+  <div
+    class="flex flex-col w-full h-full items-center min-h-screen pt-36 lg:pt-24"
+  >
     <TargetPageWrapper
       client:load
-      title="Landing"
-      description="this is a separate page created for marketing or advertising purposes to increase conversions."
+      title="Лендинг"
+      description="Это отдельная страница, созданная специально для продвижения или рекламы с целью повышения конверсии."
       anchor="landing-information"
       backgroundColor="bg-blue-800"
     />
@@ -22,69 +21,63 @@ import Layout from "#layouts/Layout.astro";
       <SectionWrapper
         client:load
         id="landing-pluses"
-        title="Landing page advantages"
+        title="Преимущества лендинга"
       >
-        <ul class="flex flex-col gap-2 *:text-md lg:*:text-lg *:text-white">
+        <ul
+          class="flex flex-col gap-2 w-full *:text-md lg:*:text-lg *:text-white"
+        >
           <li>
-            <p>- simple lead generation</p>
+            <p>- быстрый и эффективный сбор заявок</p>
           </li>
           <li>
-            <p>- collecting client data</p>
+            <p>- получение контактных данных потенциальных клиентов</p>
           </li>
           <li>
-            <p>- improving SEO performance</p>
+            <p>- улучшение позиций сайта в поисковой выдаче</p>
           </li>
           <li>
-            <p>- great opportunity to promote new products</p>
+            <p>- идеальный формат для запуска нового продукта</p>
           </li>
           <li>
-            <p>- streamlined decision-making process</p>
+            <p>- упрощение принятия решения клиентом</p>
           </li>
         </ul>
       </SectionWrapper>
       <SectionWrapper
         client:load
         id="landing-how-to-work"
-        title="How does the landing page work?"
+        title="Как работает лендинг?"
       >
         <div
           class="flex flex-col lg:flex-row gap-4 *:text-md lg:*:text-lg *:text-white"
         >
           <div class="flex flex-col gap-y-6">
             <p>
-              Landing works extremely simply. After clicking a link, the user is
-              taken to a landing page that showcases a special offer or
-              describes a specific product.
+              Всё работает просто: пользователь кликает по ссылке и попадает на
+              страницу с конкретным предложением или продуктом.
             </p>
             <p>
-              The main element of the landing page is a clear CTA, quality
-              image, and text that encourages people to fill out a subscription
-              form. To access the special offer, the user needs to leave their
-              details — thus becoming a lead.
+              Основная задача такой страницы — направить внимание на чёткий
+              призыв к действию, сопровождаемый визуалом и лаконичным текстом.
+              Чтобы получить бонус или доступ к информации, пользователь
+              оставляет свои контактные данные — и становится лидом.
             </p>
             <div class="flex flex-col gap-y-1">
-              <p>The key components of a landing page are:</p>
-              <p>- captivating headline</p>
-              <p>- relevant text</p>
-              <p>- attention-grabbing images</p>
-              <p>- features and benefits</p>
-              <p>- subscription form</p>
+              <p>Что делает лендинг эффективным:</p>
+              <p>- цепляющий заголовок</p>
+              <p>- понятное и уместное описание</p>
+              <p>- визуалы, которые не проходят мимо</p>
+              <p>- чёткие выгоды для клиента</p>
+              <p>- форма захвата данных (лид-форма)</p>
             </div>
           </div>
           <ImageWithAnnotation
-            propSrc="/images/landing-duolingo.png"
+            propSrc={Example.src}
             propAlt="Duo example"
-            annotation="Example of a landing page using Duolingo"
+            annotation="Пример лендинга на базе Duolingo"
           />
         </div>
       </SectionWrapper>
-    </div>
-    <div class="wrapper w-fit mb-12">
-      <a href="/#contacts">
-        <Button client:load>
-          <p class="text-lg text-white font-medium">Contact Us</p>
-        </Button>
-      </a>
     </div>
   </div>
 </Layout>

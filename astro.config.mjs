@@ -52,9 +52,9 @@ export default defineConfig({
   },
   site: "https://instant-website-beta.vercel.app",
   integrations: [
-    solidJs({ 
-      devtools: true 
+    solidJs({
+      devtools: true
     }),
-    sitemap()
+    sitemap(),
   ]
 });

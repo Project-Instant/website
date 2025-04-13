@@ -13,7 +13,7 @@ import {
 import { DecryptedText } from "#ui/decrypted-text";
 ---
 
-<Layout title="Welcome">
+<Layout title="Добро пожаловать">
 	<div class="absolute h-dvh w-full overflow-hidden">
 		<Ripple client:load class="-top-[812px]" />
 	</div>
@@ -25,14 +25,14 @@ import { DecryptedText } from "#ui/decrypted-text";
 		>
 			<div class="flex flex-col items-center gap-6 w-full">
 				<DecryptedText
-					text="Top-tier development. No compromises."
+					text="Разработка без компромиссов"
 					client:load
 					parentClassName="font-bold text-center text-4xl xl:text-6xl 2xl:text-7xl text-white cursor-default"
 				/>
 				<span
 					class="text-cod-gray-300 text-center text-lg xl:text-xl 2xl:text-2xl font-medium cursor-default"
 				>
-					We craft solutions with precision and innovation.
+					Продумано. Эстетично. Надёжно.
 				</span>
 			</div>
 			<div
@@ -41,7 +41,7 @@ import { DecryptedText } from "#ui/decrypted-text";
 				<a href={`#${CREATE_ORDER_ID}`}>
 					<RainbowButton client:load>
 						<span class="text-cod-gray-800 text-lg font-semibold">
-							🚀&nbsp;&nbsp;Let's Build Together
+							🚀&nbsp;&nbsp;Хочу сайт
 						</span>
 					</RainbowButton>
 				</a>
@@ -51,60 +51,93 @@ import { DecryptedText } from "#ui/decrypted-text";
 						class="border px-8 border-cod-gray-400 rounded-xl"
 					>
 						<span class="text-cod-gray-50 text-lg font-semibold">
-							About Instant
+							Почему мы?
 						</span>
 					</Button>
 				</a>
 			</div>
 		</div>
 	</div>
-	<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 wrapper relative my-16">
-		<div class="flex items-center gap-2">
-			<div class="w-[4px] h-full bg-cod-gray-400"></div>
-			<div class="flex flex-col">
-				<p class="text-cod-gray-50 text-lg font-semibold">
-					Innovation & Quality
-				</p>
-				<p class="text-cod-gray-300 text-lg">
-					We build high-performance digital products, from landing pages to SaaS
-					platforms. Every project is crafted with precision, ensuring seamless
-					UI/UX and modern technology.
-				</p>
+	<SectionWrapper client:load id="tech-points" title="Коротко о нас">
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 wrapper relative">
+			<div class="flex items-center gap-2">
+				<div class="w-[4px] h-full bg-cod-gray-400"></div>
+				<div class="flex flex-col">
+					<p class="text-cod-gray-50 text-lg font-semibold">
+						Что разрабатываем
+					</p>
+					<p class="text-cod-gray-300 text-lg">
+						Быстрые и надёжные цифровые продукты: от лендингов до SaaS-платформ.
+					</p>
+				</div>
+			</div>
+			<div class="flex items-center gap-2">
+				<div class="w-[4px] h-full bg-cod-gray-400"></div>
+				<div class="flex flex-col">
+					<p class="text-cod-gray-50 text-lg font-semibold">
+						Разработка под ключ
+					</p>
+					<p class="text-cod-gray-300 text-lg">
+						Берём на себя весь процесс — от фронтенда до бэкенда. Решения
+						масштабируемые, быстрые и полностью адаптированы под цели вашего
+						бизнеса.
+					</p>
+				</div>
+			</div>
+			<div class="flex items-center gap-2">
+				<div class="w-[4px] h-full bg-cod-gray-400"></div>
+				<div class="flex flex-col">
+					<p class="text-cod-gray-50 text-lg font-semibold">Что предлагаем</p>
+					<p class="text-cod-gray-300 text-lg">
+						Удобные и понятные решения, которые помогают вашему бизнесу расти и
+						достигать целей.
+					</p>
+				</div>
+			</div>
+			<div
+				id="about"
+				class="h-[2px] opacity-0 w-full absolute border-white left-0 right-0 border bottom-48"
+			>
 			</div>
 		</div>
-		<div class="flex items-center gap-2">
-			<div class="w-[4px] h-full bg-cod-gray-400"></div>
-			<div class="flex flex-col">
-				<p class="text-cod-gray-50 text-lg font-semibold">
-					Full-Cycle Development
-				</p>
-				<p class="text-cod-gray-300 text-lg">
-					From frontend to backend, we handle the entire development process.
-					Our solutions are scalable, efficient, and tailored to meet your
-					business goals.
-				</p>
-			</div>
-		</div>
-		<div class="flex items-center gap-2">
-			<div class="w-[4px] h-full bg-cod-gray-400"></div>
-			<div class="flex flex-col">
-				<p class="text-cod-gray-50 text-lg font-semibold">
-					Results-Driven Approach
-				</p>
-				<p class="text-cod-gray-300 text-lg">
-					We focus on creating powerful and reliable web applications—corporate
-					websites, e-commerce platforms, dashboards, and more—to help your
-					business grow.
-				</p>
-			</div>
-		</div>
-		<div id="about" class="h-[2px] opacity-0 w-full absolute border-white left-0 right-0 border bottom-48"/>
-	</div>
-	<SectionWrapper client:load id="available-services" title="Build this">
+	</SectionWrapper>
+	<SectionWrapper client:load id="available-services" title="Что мы делаем">
 		<Services client:load />
 	</SectionWrapper>
-	<SectionWrapper client:load id="pricing" title="Pricing">
+	<SectionWrapper client:load id="pricing" title="Цены">
 		<Pricing client:load />
 	</SectionWrapper>
-	<CreateOrder client:visible />
+	<CreateOrder client:load />
+	<div id="contacts" class="flex flex-col w-full items-center h-full my-24">
+		<div class="flex flex-col items-center justify-center gap-4 wrapper">
+			<div class="flex flex-col items-center justify-center">
+				<p class="text-cod-gray-50 text-xl font-semibold">Есть вопросы?</p>
+				<p class="text-cod-gray-300 text-xl">
+					Можете смело написать нам лично в Телеграм
+				</p>
+			</div>
+			<a href="https://t.me/instant_project" target="_blank">
+				<Button class="w-fit bg-[#0081ce] rounded-xl gap-2 px-4 py-2">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						fill="none"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke="#FFFFFF"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M10.5 13.5 21 3M10.627 13.828l2.628 6.758c.232.596.347.893.514.98a.5.5 0 0 0 .462 0c.167-.086.283-.384.515-.979L21.336 3.7c.21-.537.315-.805.258-.977a.5.5 0 0 0-.316-.316c-.172-.057-.44.048-.978.257L3.413 9.253c-.595.233-.893.349-.98.516a.5.5 0 0 0 0 .461c.087.167.385.283.98.514l6.758 2.629c.121.047.182.07.233.106a.5.5 0 0 1 .116.117c.037.051.06.111.107.232Z"
+						></path>
+					</svg>
+					<span class="text-cod-gray-50 font-semibold text-lg">
+						Задать вопрос
+					</span>
+				</Button>
+			</a>
+		</div>
+	</div>
 </Layout>

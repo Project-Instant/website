@@ -1,21 +1,21 @@
 ---
-// export const prerender = false;
-
 import { SectionWrapper } from "#components/wrappers/section-wrapper";
 import Layout from "#layouts/Layout.astro";
 import { Portfolio as PortfolioComponent } from "#components/sections/portfolio";
 ---
 
-<Layout title="Portfolio">
-	  <div class="flex flex-col items-center w-full h-full min-h-screen pt-40 lg:pt-24">
- <div class="flex flex-col wrapper">
-		<SectionWrapper
-			client:load
-			id="portfolio-cases"
-			title="Examples of Our Works"
-		>
+<Layout title="Портфолио">
+	<div
+		class="flex flex-col items-center w-full h-full min-h-screen pt-40 lg:pt-24"
+	>
+		<div class="flex flex-col wrapper">
+			<SectionWrapper
+				client:load
+				id="portfolio-cases"
+				title="Выполненные проекты"
+			>
 				<PortfolioComponent client:load />
-		</SectionWrapper>
+			</SectionWrapper>
+		</div>
 	</div>
-</div>
 </Layout>

@@ -1,73 +1,55 @@
 import { PORTFOLIO_CASES } from "#shared/portfolio";
-import { Dialog, DialogTrigger, DialogContent } from "#ui/dialog";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "#ui/accordion";
-import { For } from "solid-js";
+import { Button } from "#ui/button";
+import { For, Show } from "solid-js";
 import type { Component } from "solid-js";
 
 export const Portfolio: Component = () => {
 	return (
-		<For each={PORTFOLIO_CASES}>
-     {(item) => (
-				<Dialog>
-					<DialogTrigger>
-						<div
-							class={`flex flex-col gap-4 rounded-xl h-full p-6 relative overflow-hidden min-h-[500px] lg:min-h-[300px] ${item.backgroundColor}`}
-						>
-							<div class="max-w-xl relative">
-								<h2 class="text-left font-bold mono-tag uppercase text-base md:text-xl lg:text-5xl tracking-[-0.015em] text-cod-gray-50">
-									{item.name}
-								</h2>
-								<p class="mt-4 text-left text-xl text-neutral-200">
-									{item.description}
-								</p>
-							</div>
-							<img src={item.image.src} width={500} height={500}	alt="" class="absolute -right-4 filter -bottom-2 object-contain rounded-2xl"/>
+		<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 w-full h-full gap-4">
+			<For each={PORTFOLIO_CASES}>
+				{(item) => (<div
+					class={`flex flex-col gap-4 cursor-pointer rounded-xl p-4 h-full relative overflow-hidden border border-cruise-400`}
+				>
+					<div class="flex w-full overflow-hidden h-[290px]">
+						<img
+							src={item.image.src}
+							width={1920}
+							height={1080}
+							alt=""
+							class="w-full h-full object-cover rounded-2xl"
+						/>
+					</div>
+					<div class="flex flex-col gap-4 w-full h-fit">
+						<h2 class="text-left font-bold uppercase text-base md:text-xl lg:text-3xl tracking-[-0.015em] text-cod-gray-50">
+							{item.name}
+						</h2>
+						<div class="flex w-full *:w-full h-full items-center justify-between gap-2">
+							<Button class="bg-cod-gray-700/40 focus:bg-cod-gray-700 active:bg-cod-gray-700">
+								<span class="text-cod-gray-50 text-lg">
+									Детали
+								</span>
+							</Button>
+							<Show when={item.link}>
+								<a href={item.link!} target="_blank">
+									<Button class="w-full bg-cod-gray-700/40 focus:bg-cod-gray-700 active:bg-cod-gray-700">
+										<span class="text-cod-gray-50 text-lg">
+											Перейти
+										</span>
+									</Button>
+								</a>
+							</Show>
+							<Show when={!item.link}>
+								<Button disabled={true} class="w-full bg-cod-gray-700/40 focus:bg-cod-gray-700 active:bg-cod-gray-700">
+									<span class="text-cod-gray-50 text-lg">
+										Перейти
+									</span>
+								</Button>
+							</Show>
 						</div>
-					</DialogTrigger>
-					<DialogContent class="flex flex-col gap-y-6 max-w-5xl max-h-[620px] lg:max-h-[720px] py-4 px-4 overflow-hidden !overflow-y-auto w-full">
-						<div class="flex flex-col gap-y-1">
-							<h2 class="text-white text-3xl font-semibold">
-								{item.name}
-							</h2>
-							<p class="text-cod-gray-300 text-md">click on one of the buttons to expand the list of screenshots</p>
-						</div>
-						<Accordion id="portfolio" collapsible class="flex flex-col gap-y-2">
-							<AccordionItem value="desktop">
-								<AccordionTrigger class="bg-neutral-800 rounded-md p-2 w-full">
-									<p class="text-white text-lg font-semibold">Desktop</p>
-								</AccordionTrigger>
-								<AccordionContent>
-									<div class="flex flex-col gap-y-4 grow">
-										<For each={item.desktopCase}>
-											{(screen) => (
-												<div class="flex w-full overflow-hidden">
-													<img src={screen.src} alt=""	width={1200}	height={900}	class="w-full h-full"/>
-												</div>
-											)}
-										</For>
-									</div>
-								</AccordionContent>
-							</AccordionItem>
-							<AccordionItem value="mobile">
-								<AccordionTrigger class="bg-neutral-800 rounded-md p-2 w-full">
-									<p class="text-white text-lg font-semibold">Mobile</p>
-								</AccordionTrigger>
-								<AccordionContent>
-									<div class="flex flex-col gap-y-4 items-center">
-										<For each={item.mobileCase}>
-											{(screen) => (
-												<div class="w-[390px] h-full overflow-hidden flex">
-													<img src={screen.src}	alt=""	width={390} height={500} class="w-full h-full" />
-												</div>
-											)}
-										</For>
-									</div>
-								</AccordionContent>
-							</AccordionItem>
-						</Accordion>
-					</DialogContent>
-				</Dialog>
-		 )}
-		</For>
+					</div>
+				</div>
+				)}
+			</For>
+		</div>
 	)
 }
